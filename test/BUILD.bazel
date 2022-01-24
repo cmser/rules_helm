@@ -1,0 +1,10 @@
+load("@com_github_cmser_rules_helm//chart:defs.bzl", "helm_chart")
+
+helm_chart(
+    name = "foo",
+    srcs = glob(include = ["**/*"], exclude = ["Chart.yaml"]),
+    entry_point = "Chart.yaml",
+    deps = [
+        "@helm_traefik_io_traefik//traefik:chart"
+    ]
+)

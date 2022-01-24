@@ -1,0 +1,1 @@
+exports_files(srcs = ["repositories.bzl"], visibility = ["//visibility:public"])
